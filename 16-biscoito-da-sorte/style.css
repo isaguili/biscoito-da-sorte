@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    -moz-osx-font-smoothing: grayscale;   
+    -webkit-font-smoothing: antialiased;
+    color: #34355B;
+}
+
+body {
+    height: 100dvh;
+    display: grid;
+    place-content: center;
+    background: linear-gradient(45deg, #190361 0%, #B0F 100%);
+}
+
+.hide {
+    display: none;
+}
+
+main {
+    width: 42.8rem;
+    padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+    
+    font-family: "Montserrat", sans-serif;;
+    text-align: center;
+    
+    background-color: #FFF;
+    box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.80);
+    border-radius: .5rem;
+}
+
+/*CHOICESCREEN*/
+
+h1 {
+    font-size: 2.4rem;
+    margin-bottom: 1.4rem;
+}
+
+p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+img {
+    width: 25rem;
+    height: 20rem;
+}
+
+img:hover {
+    cursor: pointer;
+}
+
+/*RESULTSCREEN*/
+
+.secondScreen h1, p, img {
+    margin-bottom: 1.8rem;
+}
+
+.secondScreen p {
+    font-family: "Dancing Script";
+    font-size: 2.4rem;
+    font-weight: 400;
+    color: #000;
+
+   
+    background: #E4EDF1;
+    box-shadow: 2px 2px 2px 0px rgba(85, 85, 85, 0.50);
+    padding: 1rem;
+}
+
+.secondScreen img {
+    width: 30rem;
+}
+
+button {
+    font-family: "DM Sans";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    color: #fff;
+
+    border: none;
+    background-color: #FF9500;
+
+    padding: 1.6rem;
+}
+
+button:hover {
+    background-color: #ffa11e;
+    cursor: pointer;
+}
+
+/*ANIMAÇÕES*/
+
+.firstScreen img:hover {
+    animation: shaking 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;;
+}
+
+ @keyframes shaking {
+    0%,
+  100% {
+            transform: rotate(-2deg) translate(0);
+  }
+  10% {
+            transform: rotate(2deg) translate(-2px, 2px);
+  }
+  20%,
+  40%,
+  60% {
+            transform: rotate(-4deg) translate(-2px, -2px);
+  }
+  30%,
+  50%,
+  70% {
+            transform: rotate(4deg);
+  }
+  80% {
+            transform: rotate(-2deg);
+  }
+  90% {
+            transform: rotate(2deg) translate(0);
+  }
+}
+
+.secondScreen p {
+   animation: slide-in 1s ease-in-out;
+}
+
+ @keyframes slide-in {
+    0% {
+        transform: translateY(15rem) scale(.1);
+      }
+      100% {
+        transform: translateY(0);
+      }
+}
+
+body {
+    animation: gradientChange 5s ease infinite;
+    background-size: 200% 200%;
+}
+
+@keyframes gradientChange {
+    0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
